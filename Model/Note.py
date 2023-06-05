@@ -3,35 +3,38 @@ from _datetime import datetime
 
 class Note:
     @staticmethod
-    def set_new_note_id(note_id: int) -> int:
-        Note.note_id += 1
+    def __set_new_note_id(note_id: int) -> int:
+        Note.__note_id += 1
         return note_id
 
-    __slots__ = ('note_id', 'creation_time', 'header', 'body')
+    __note_id = 1
+    __creation_time = datetime.now()
+    __header = "untitled"
+    __body = "..."
 
     def __init__(self):
-        self.note_id = Note.set_new_note_id(Note.note_id)
-        self.creation_time = datetime.now()
-        self.header = "untitled"
-        self.body = "..."
+        self.__note_id = Note.__set_new_note_id(Note.__note_id)
+
+    def __del__(self):
+        del self
 
     def get_note_id(self):
-        return self.note_id
+        return self.__note_id
 
     def get_creation_time(self):
-        return self.creation_time
+        return self.__creation_time
 
     def get_header(self):
-        return self.header
+        return self.__header
 
     def get_body(self):
-        return self.body
+        return self.__body
 
     def set_header(self, header: str):
-        self.header = header
+        self.__header = header
 
     def set_body(self, body: str):
-        self.body = body
+        self.__body = body
 
     def get_note_info(self):
         return f"Note id: {self.get_note_id()}'\t'Creation time: {self.get_creation_time()}" \
