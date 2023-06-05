@@ -1,4 +1,4 @@
-from Note import Note
+from .Note import Note
 
 
 class NoteList:
