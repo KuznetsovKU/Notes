@@ -42,3 +42,8 @@ class Note:
                f"{self.get_header()}" \
                f"'\n'------------------------------'\n'" \
                f"{self.get_body()}'\n'"
+
+    def get_small_note_info(self):
+        return f"Note id: {self.get_note_id()}'\t'Creation time: {self.get_creation_time()}" \
+               f"'\n'------------------------------'\n'" \
+               f"{self.get_header()}"

@@ -5,6 +5,9 @@ class NoteList:
     def __init__(self):
         self.__note_list = []
 
+    def get_note_list(self) -> list[Note]:
+        return self.__note_list
+
     def add_note_to_list(self, new_note: Note):
         self.__note_list.append(new_note)
 
