@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27da396f-26e2-46e9-a503-65d5f4134479" name="Changes" comment="changed NoteList.py">
+    <list default="true" id="27da396f-26e2-46e9-a503-65d5f4134479" name="Changes" comment="changed NoteList.py, Note.py, added module Service include NoteService.py, NoteListService.py, Validator.py">
       <change afterPath="$PROJECT_DIR$/Controller/Controller.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Controller/Menus.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Controller/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/JSONParser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/NoteListService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/NoteService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/Validator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/FileService.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/View/View.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/View/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Note.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Note.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/NoteList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/NoteList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/NoteListService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/NoteListService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/NoteService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/NoteService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="service" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -53,7 +54,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Personal documents/Education/=Projects/MyFirstTryTGBot",
+    "last_opened_file_path": "D:/Personal documents/Education/=Projects/Meeting_Python_23",
     "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
