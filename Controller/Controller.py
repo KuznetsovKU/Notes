@@ -23,36 +23,53 @@ class Controller:
                     View.ask_search_parameter(menus.get_search_menu()[search_menu_command])
                     search_parameter = input()
                     search_result = NoteListService.find_note(search_menu_command, search_parameter)
-                    View.show_all_notes(search_result)
                     if search_result:
+                        # current_note = 0
                         if len(search_result) > 1:
-                            choice_menu = dict(enumerate(list(map(lambda x: x.get_header(), search_result)), start=1))
+                            View.show_all_notes(search_result)
+                            choice_menu_list = list(map(lambda x: x.get_header(), search_result))
+                            choice_menu_list.append('Выйти в главное меню')
+                            choice_menu = dict(enumerate(choice_menu_list, start=1))
                             View.show_menu(choice_menu)
                             choice_menu_command = Controller.__get_user_answer(choice_menu)
-                            View.show_note(search_result[choice_menu_command - 1])
+                            if choice_menu_command == len(search_result) + 1:
+                                View.step_back_information()
+                                continue
+                            else:
+                                current_note = search_result[choice_menu_command - 1]
+                                # View.show_note(search_result[choice_menu_command - 1])
                         else:
-                            View.show_note(search_result[0])
+                            current_note = search_result[0]
+                            # View.show_note(search_result[0])
+                        View.show_note(current_note)
                         View.show_menu(menus.get_note_menu())
                         note_menu_command = Controller.__get_user_answer(menus.get_note_menu())
                         match note_menu_command:
                             case 1:  # Изменить заметку
-                                pass
-                            case 2:  # Удалить заметку
-                                View.ask_to_confirm(menus.get_main_menu())
+                                View.ask_to_confirm(menus.get_note_menu()[1])
                                 View.show_menu(menus.get_confirm_menu())
                                 confirm_menu_command = Controller.__get_user_answer(menus.get_confirm_menu())
                                 match confirm_menu_command:
                                     case 1:  # Подтвердить
-                                        check1 = NoteListService.delete_note_from_list(1)
-                                        check2 = FileService.clear_note_file()
-                                        View.confirm_note_file_clearing(check1, check2)
-                                    case 2:  # Отменить
-                                        continue
-                            case 3:  # Выйти в главное меню
+                                        header, body = Controller.__get_new_data()
+                                        NoteService.change_note(current_note, header, body)
+                                        # добавить проверки
+                                    case 0:  # Отменить
+                                        View.step_back_information()
                                 pass
-
-                    ## не дописано
-
+                            case 2:  # Удалить заметку
+                                View.ask_to_confirm(menus.get_note_menu()[2])
+                                View.show_menu(menus.get_confirm_menu())
+                                confirm_menu_command = Controller.__get_user_answer(menus.get_confirm_menu())
+                                match confirm_menu_command:
+                                    case 1:  # Подтвердить
+                                        check1 = NoteListService.delete_note_from_list(current_note)
+                                        check2 = FileService.clear_note_file()  # проверить
+                                        View.confirm_note_file_clearing(check1, check2)
+                                    case 0:  # Отменить
+                                        View.step_back_information()
+                            case 3:  # Выйти в главное меню
+                                View.step_back_information()
                 case 3:  # Добавить заметку
                     header, body = Controller.__get_new_data()
                     note = NoteService.create_new_note(header, body)
@@ -68,9 +85,9 @@ class Controller:
                             check1 = NoteListService.clear_note_list()
                             check2 = FileService.clear_note_file()
                             View.confirm_note_file_clearing(check1, check2)
-                        case 2:  # Отменить
+                        case 0:  # Отменить
                             continue
-                case 5:  # Выйти из программы
+                case 0:  # Выйти из программы
                     View.farewell()
                     program_is_running = False
 

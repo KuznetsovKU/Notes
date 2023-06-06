@@ -13,6 +13,10 @@ class View:
         print()
 
     @staticmethod
+    def step_back_information():
+        print('Возврат на предыдуший уровень меню.')
+
+    @staticmethod
     def synchronize_informing(result: bool):
         if result:
             print('Синхронизация записной книжки выполнена успешно.')
@@ -81,7 +85,7 @@ class View:
 
     @staticmethod
     def ask_to_confirm(operation: str):
-        print(f"\nПожалуйста, подтвердите операцию {operation}:")
+        print(f'\nПожалуйста, подтвердите операцию "{operation}":')
         print()
 
     @staticmethod

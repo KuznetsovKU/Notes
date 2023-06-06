@@ -15,9 +15,9 @@ class NoteListService:
         return new_note in note_list.get_note_list()
 
     @staticmethod
-    def delete_note_from_list(note_to_delete_id: int, note_list: NoteList = nl) -> bool:
-        note_list.delete_note_from_list(note_to_delete_id)
-        return True
+    def delete_note_from_list(note: Note, note_list: NoteList = nl) -> bool:
+        note_list.delete_note_from_list(note)
+        return note not in note_list
 
     @staticmethod
     def clear_note_list(note_list: NoteList = nl) -> bool:

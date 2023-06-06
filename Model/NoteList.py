@@ -11,10 +11,10 @@ class NoteList:
     def add_note_to_list(self, new_note: Note):
         self.__note_list.append(new_note)
 
-    def delete_note_from_list(self, note_to_delete_id: int):
-        for note in self.__note_list:
-            if note.get_note_id() == note_to_delete_id:
-                self.__note_list.remove(note)
+    def delete_note_from_list(self, note: Note):
+        for element in self.__note_list:
+            if element == note:
+                self.__note_list.remove(element)
                 break
 
     def clear_note_list(self):
