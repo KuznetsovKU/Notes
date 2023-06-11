@@ -50,6 +50,7 @@ class NoteListService:
 
     @staticmethod
     def fill_note_list_from_note_file(notes_from_file: list[dict], note_list: NoteList = nl) -> int:
+        max_note_id = 0
         for element in notes_from_file:
             note = Note()
             note.set_note_id(element.get('_Note__note_id'))
@@ -57,6 +58,9 @@ class NoteListService:
             note.set_header(element.get('_Note__header'))
             note.set_body(element.get('_Note__body'))
             note_list.add_note_to_list(note)
+            if note.get_note_id() > max_note_id:
+                max_note_id = note.get_note_id()
+        Note.set_class_note_id(max_note_id + 1)
         return len(note_list.get_note_list())
 
     # @staticmethod

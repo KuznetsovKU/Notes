@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27da396f-26e2-46e9-a503-65d5f4134479" name="Changes" comment="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py">
+    <list default="true" id="27da396f-26e2-46e9-a503-65d5f4134479" name="Changes" comment="almost done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Menus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Menus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/FileService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/FileService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Note.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Note.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/NoteList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/NoteList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Service/NoteListService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/NoteListService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/View.py" beforeDir="false" afterPath="$PROJECT_DIR$/View/View.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686086819131</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="almost done">
+      <created>1686467841974</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686467841974</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +138,7 @@
     <MESSAGE value="changed NoteList.py" />
     <MESSAGE value="changed NoteListService.py, Note.py, NoteService.py, Validator.py, added module Controller, added module View" />
     <MESSAGE value="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py" />
+    <MESSAGE value="almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost done" />
   </component>
 </project>

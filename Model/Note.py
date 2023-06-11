@@ -1,6 +1,7 @@
 from _datetime import datetime
 
 
+
 class Note:
     @staticmethod
     def __set_new_note_id(note_id: int) -> int:
@@ -55,3 +56,7 @@ class Note:
                f"{self.get_header()}" \
                f"'\n'------------------------------------------------'\n'" \
                f"{self.get_body()[:44]}...'\n"
+
+    @classmethod
+    def set_class_note_id(cls, new_note_id: int):
+        cls.__note_id = new_note_id

@@ -19,3 +19,10 @@ class NoteList:
 
     def clear_note_list(self):
         self.__note_list.clear()
+
+    # def find_max_note_id(self) -> int:
+    #     max_note_id = 0
+    #     for element in self.__note_list:
+    #         if element.get_note_id() > max_note_id:
+    #             max_note_id = element.get_note_id()
+    #     return max_note_id
