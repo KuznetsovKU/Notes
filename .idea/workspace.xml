@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27da396f-26e2-46e9-a503-65d5f4134479" name="Changes" comment="changed NoteListService.py, Note.py, NoteService.py, Validator.py, added module Controller, added module View">
-      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+    <list default="true" id="27da396f-26e2-46e9-a503-65d5f4134479" name="Changes" comment="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/Menus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Menus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/NoteList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/NoteList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/FileService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/FileService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Service/NoteListService.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service/NoteListService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/View.py" beforeDir="false" afterPath="$PROJECT_DIR$/View/View.py" afterDir="false" />
     </list>
@@ -49,7 +48,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Personal documents/Education/=Projects/Meeting_Python_23",
+    "last_opened_file_path": "D:/Personal documents/Education/=Projects/PhoneBook",
     "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686082327793</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py">
+      <created>1686086819131</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686086819131</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +132,7 @@
     <MESSAGE value="changed Note.py &amp; NoteList.py" />
     <MESSAGE value="changed NoteList.py" />
     <MESSAGE value="changed NoteListService.py, Note.py, NoteService.py, Validator.py, added module Controller, added module View" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed NoteListService.py, Note.py, NoteService.py, Validator.py, added module Controller, added module View" />
+    <MESSAGE value="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed Controller.py, Menus.py, NoteList.py NoteListService.py, View.py, added Main.py" />
   </component>
 </project>

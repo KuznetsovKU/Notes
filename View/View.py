@@ -49,12 +49,22 @@ class View:
         print("Введите корректный номер выбранной операции: ", end='')
 
     @staticmethod
-    def show_all_notes(note_list: list[Note]):
+    def check_note_list(note_list: list[Note]):
         print()
         if not note_list:
             print("Заметки не найдены")
         else:
+            return True
+
+    @staticmethod
+    def show_all_notes(note_list: list[Note]):
+        # print()
+        # if not note_list:
+        #     print("Заметки не найдены")
+        # else:
+        if View.check_note_list(note_list):
             print("Найдены следующие заметки:")
+            note_list = sorted(note_list, key=lambda x: x.get_creation_or_changing_time(), reverse=True)
             for note in note_list:
                 print(f'{note.get_small_note_info()}')
                 print()
@@ -71,8 +81,7 @@ class View:
         if list_clearing_confirmation and file_clearing_confirmation:
             print("Список заметок успешно очищен.")
         else:
-            print("Произошла ошибка! Попробуйте повторить операцию.")
-        print()
+            View.__operation_failure()
 
     @staticmethod
     def confirm_note_adding(to_list_adding_confirmation: bool, to_file_adding_confirmation: bool, header):
@@ -80,8 +89,23 @@ class View:
         if to_list_adding_confirmation and to_file_adding_confirmation:
             print(f'Заметка "{header}" успешно добавлена.')
         else:
-            print("Произошла ошибка! Попробуйте повторить операцию.")
+            View.__operation_failure()
+
+    @staticmethod
+    def confirm_note_deleting(from_list_deleting_confirmation: bool, from_file_deleting_confirmation: bool, header):
         print()
+        if from_list_deleting_confirmation and from_file_deleting_confirmation:
+            print(f'Заметка "{header}" успешно удалена.')
+        else:
+            View.__operation_failure()
+
+    @staticmethod
+    def confirm_note_changing(in_list_changing_confirmation: bool, in_file_changing_confirmation: bool, header):
+        print()
+        if in_list_changing_confirmation and in_file_changing_confirmation:
+            print(f'Заметка "{header}" успешно изменена.')
+        else:
+            View.__operation_failure()
 
     @staticmethod
     def ask_to_confirm(operation: str):
@@ -96,3 +120,7 @@ class View:
     def ask_note_body():
         print(f"Введите содержимое заметки: ", end='')
 
+    @staticmethod
+    def __operation_failure():
+        print("Произошла ошибка! Попробуйте повторить операцию.")
+        print()

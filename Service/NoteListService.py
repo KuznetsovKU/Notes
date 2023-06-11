@@ -12,12 +12,14 @@ class NoteListService:
     @staticmethod
     def add_note_to_list(new_note: Note, note_list: NoteList = nl) -> bool:
         note_list.add_note_to_list(new_note)
+        # NoteListService.sort_note_list_by_date()
         return new_note in note_list.get_note_list()
 
     @staticmethod
     def delete_note_from_list(note: Note, note_list: NoteList = nl) -> bool:
+        prev_length = len(note_list.get_note_list())
         note_list.delete_note_from_list(note)
-        return note not in note_list
+        return len(note_list.get_note_list()) == prev_length - 1 and note not in note_list.get_note_list()
 
     @staticmethod
     def clear_note_list(note_list: NoteList = nl) -> bool:
@@ -56,3 +58,8 @@ class NoteListService:
             note.set_body(element.get('_Note__body'))
             note_list.add_note_to_list(note)
         return len(note_list.get_note_list())
+
+    # @staticmethod
+    # def sort_note_list_by_date(note_list: NoteList = nl) -> list[Note]:
+    #     result = sorted(note_list.get_note_list(), key=lambda x: x.get_creation_or_changing_time())
+    #     return result
